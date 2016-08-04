@@ -1,9 +1,9 @@
 Core Estimator
 ==============
 
-Core Estimator is a cross-browser polyfill for [navigator.hardwareConcurrency](http://wiki.whatwg.org/wiki/Navigator_HW_Concurrency).
+Core Estimator is a cross-browser polyfill for [navigator.hardwareConcurrency](https://html.spec.whatwg.org/multipage/workers.html#navigator.hardwareconcurrency).
 
-The estimator works by performing a statistical test on running different numbers of simultaneous web workers. It measures the time it takes to run a single worker and compares this to the time it takes to run an increasing number of workers. As soon as this measurement starts to increase excessively, it has found the maximum number of web workers which can be run simultaneously without degrading performance.
+The estimator works by performing a timing attack that runs different numbers of simultaneous web workers. It measures the time it takes to run a single worker and compares this to the time it takes to run an increasing number of workers. As soon as this measurement starts to increase excessively, it has found the maximum number of web workers which can be run simultaneously without degrading performance.
 
 
 [Live demo](http://wg.oftn.org/projects/core-estimator/demo/)
@@ -36,10 +36,12 @@ Supported browsers
 ------------------
 
 * Firefox
-* Chrome (Native support)
-* Safari (Native support soon)
+* Firefox 48 (Native)
+* Chrome (Native)
+* Safari (Native)
 * Internet Explorer 10+
-* Opera (Native support)
+* Opera (Native)
+* Edge
 
 
 Forward compatibility
